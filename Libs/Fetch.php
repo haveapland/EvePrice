@@ -1,6 +1,6 @@
 <?php
 
-namespace EvePrice\Lib;
+namespace EvePrice\Libs;
 
 class Fetch
 {
@@ -26,17 +26,22 @@ class Fetch
         return $this->itemlist;
     }
 
+    public function getPostfield()
+    {
+        return $this->postfield;
+    }
+
     private function generatePostFields($typeid = [], $systemid=30000142, $hours=24)
     {
         $this->postfield = 'hours='.$hours.'&usesystem='.$systemid;
     
         foreach ($typeid as $id)
         {
-        $this->postfield .= '&typeid='.$id;
+            $this->postfield .= '&typeid='.$id;
         }
 
         if(!$this->postfield){
-        throw new \Exception('Empty POST request');
+            throw new \Exception('Empty POST request');
         }
 
         return true;

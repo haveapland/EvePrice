@@ -1,19 +1,22 @@
 <?php
 
+use EvePrice\Lib\Fetch;
 
-class FetchJsonTest extends \PHPUnit_Framework_TestCase
+class FetchTest extends \PHPUnit_Framework_TestCase
 {
+    private $fetch;
+
     public function setUp()
     {
 
-        $this->itemlist = [178,179,180,181,182,183,184,185,186,187];
-        $this->systemid = 30000142;  //jita
-        $this->hours=24;
+        $itemlist = [178,179,180,181,182,183,184,185,186,187];
+        $this->fetch = new Fetch($itemlist);
 
     }
-    public function testGeneratePostFields($itemlist, $systemid, $hours)
-    {
 
+    public function testGeneratePostFields()
+    {
+        echo $this->fetch->getPostfield();
     }
 
 }
