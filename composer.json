@@ -1,0 +1,21 @@
+{
+    "name": "haveapland/EvePrice",
+    "description": "Php package for fetching prices from eve-central.com and storing them in mysql",
+    "license": "",
+    "keywords": ["eveprice"],
+    "authors": [
+        {
+            "name": "haveapland"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "haveapland\\EvePrice\\": "src"
+        }
+    }
+}
