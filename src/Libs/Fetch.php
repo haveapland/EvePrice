@@ -33,9 +33,9 @@ class Fetch
         return $this->post_field;
     }
 
-    public function getJsonData()
+    public function getData()
     {
-        return $this->json_data;
+        return $this->data;
     }
 
     private function generatePostFields($typeid = [], $systemid=30000142, $hours=24)
@@ -54,7 +54,7 @@ class Fetch
         return true;
     }
 
-    public function getData()
+    public function pullPrices()
     {
 
         $ch = curl_init();

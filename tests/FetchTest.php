@@ -21,7 +21,7 @@ class FetchTest extends \PHPUnit_Framework_TestCase
 
     public function testGetData()
     {
-        $this->assertTrue($this->fetch->getData());
+        $this->assertTrue($this->fetch->pullPrices());
     }
 
 }
